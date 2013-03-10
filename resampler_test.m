@@ -40,14 +40,14 @@ plot_responses(impulse_avr, alias_avr, alias_down_avr, ratio);
 
 
 %% Test libswresample
-type = 'soxr';
+type = 'swr';
 ratio = 2;
 
 impulse_swr = wavread(sprintf('impulse_swr_%s_%u.wav', type, ratio))' / ratio;
-impulse_len_swr = filter_taps(impulse_swr) / ratio;
+impulse_len_swr = filter_taps(impulse_swr) / rat
 
 alias_swr = wavread(sprintf('alias_swr_%s_%u.wav', type, ratio))';
-alias_down_swr = wavread(sprintf('alias_swr_%s_%u.wav', type, ratio))';
+alias_down_swr = wavread(sprintf('alias_down_swr_%s_%u.wav', type, ratio))';
 
 plot_responses(impulse_swr, alias_swr, alias_down_swr, ratio);
 

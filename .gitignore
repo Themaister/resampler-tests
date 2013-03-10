@@ -1,5 +1,4 @@
 *.wav
 *.o
-/resampler-test
-/resampler-test-alias
-/resampler-test-alias-down
+/resampler-test-*
+*~

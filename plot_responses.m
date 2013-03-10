@@ -22,7 +22,7 @@ xlim([0.78 1.22] / ratio);
 title(sprintf('Upsampling ratio %.2f', ratio));
 
 % Downsample alias
-figure('name', sprintf('Downsample ratio: %u', ratio));
+figure('name', sprintf('Downsample ratio: %u', 1 / ratio));
 [ww, freqs] = freqz(downsampled .* kaiser(length(downsampled), 20.0)', 1, 32 * 1024);
 ww_low = ww(1 : round(0.82 * end));
 ww_high = ww(round(0.82 * end) : end);
